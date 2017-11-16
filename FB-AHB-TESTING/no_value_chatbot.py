@@ -40,6 +40,10 @@ def long_enpough(checkpointlist):
         checkpointlist.append(6)
         return response, checkpointlist
 
+    if checkpointlist[-1] == 6:
+        response = "great, thank you! do you have another major reason for not doing sports regularly. "
+        checkpointlist.extend([8,88])
+        return response, checkpointlist
 
 
 
@@ -75,7 +79,7 @@ def handle_response(statement, checkpointlist):
         response, checkpointlist = long_enpough(checkpointlist)
         return response, checkpointlist
 
-    if checkpointlist[-1] == 6 or checkpointlist[-1] == 7:
+    if checkpointlist[-1] == 7:
         response = "great, thank you! do you have another major reason for not doing sports regularly. "
         checkpointlist.extend([8,88])
         return response, checkpointlist
@@ -146,15 +150,6 @@ def query1(statement):  #statement = userinput
         response = random.choice(responses)
         return response
 
-    k = dict((i, statement.count(i)) for i in neg)
-    neg_nr = sum(k.values())
-
-    if neg_nr > 0:
-        responses = ['Why not?',
-                    'Tell me a bit more. Why not?']
-        response = random.choice(responses)
-        return response
-
     d = dict((i, statement.count(i)) for i in expl)
     expl_nr = sum(d.values())
 
@@ -167,6 +162,17 @@ def query1(statement):  #statement = userinput
                     'A bit more detail please. What makes you say that?']
         response = random.choice(responses)
         return response
+
+    k = dict((i, statement.count(i)) for i in neg)
+    neg_nr = sum(k.values())
+
+    if neg_nr > 0:
+        responses = ['Why not?',
+                    'Tell me a bit more. Why not?']
+        response = random.choice(responses)
+        return response
+
+
 
 
 
@@ -202,17 +208,6 @@ def query(statement):  #statement = userinput
         response = statement + quest + resp
         return response
 
-
-
-    k = dict((i, statement.count(i)) for i in neg)
-    neg_nr = sum(k.values())
-
-    if neg_nr > 0:
-        responses = ['Why not?',
-                    'Tell me a bit more. Why not?']
-        response = random.choice(responses)
-        return response
-
     d = dict((i, statement.count(i)) for i in expl)
     expl_nr = sum(d.values())
 
@@ -226,6 +221,16 @@ def query(statement):  #statement = userinput
         response = random.choice(responses)
         return response
 
+
+
+    k = dict((i, statement.count(i)) for i in neg)
+    neg_nr = sum(k.values())
+
+    if neg_nr > 0:
+        responses = ['Why not?',
+                    'Tell me a bit more. Why not?']
+        response = random.choice(responses)
+        return response
 
 
 
