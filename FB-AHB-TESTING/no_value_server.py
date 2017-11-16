@@ -7,7 +7,7 @@ from quick_replies import *
 app = Flask(__name__)
 
 #access token of ArgHealthBot Application in Facebook
-ACCESS_TOKEN = "EAACJjQRK0ucBABYB3GYmsoAPKVUCTG0qPuXVfV9PH2uPym8Cczzt3hs5ZAJ7VFmGDLjZCsxLSjf09xNFVZBoiXZBtsfqhZAr2wMzqpd0oKb2WFK6vRVNthD5OB4Rn1vvMUDe8EZBy1NWMdi0ZCWRcHRgNcLgWyuhSTZAKVBmhc1bkwZDZD"
+ACCESS_TOKEN = "EAACJjQRK0ucBAOciSfRmcOafWc448ZBtZCa3XDcZAPahtpPPGBvQztZChuv1kzc9ZC9GjukmVMh7JUiprv3Bo9lEHlgzZB5mDZBp1JrLZBPVlBSy5Hx4crJQ8IqxrSJAr9OxfsaKf83ZAHDTF7J35j7yKgbL0IiRYYaA5Q2EK0zmE4wZDZD"
 # set of unique user id's
 user_ids =  set()
 
