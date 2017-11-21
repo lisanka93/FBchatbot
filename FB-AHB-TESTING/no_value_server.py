@@ -7,7 +7,7 @@ from quick_replies import *
 app = Flask(__name__)
 
 #access token of ArgHealthBot Application in Facebook
-ACCESS_TOKEN = "EAACJjQRK0ucBAOciSfRmcOafWc448ZBtZCa3XDcZAPahtpPPGBvQztZChuv1kzc9ZC9GjukmVMh7JUiprv3Bo9lEHlgzZB5mDZBp1JrLZBPVlBSy5Hx4crJQ8IqxrSJAr9OxfsaKf83ZAHDTF7J35j7yKgbL0IiRYYaA5Q2EK0zmE4wZDZD"
+ACCESS_TOKEN = "EAACJjQRK0ucBAB8hDexagsceJlfXGPakEKrY3Bexa7NEGZBkA8GTFcVrPTaM8XU49dKQD5p4qeFztsnyp8gZBKBktGAsZCdccd6PPH4EVA1FlN6ZCCuDZC00DdyoE959WE6FHprV1y2xgqnxm3xDMxIJ56ZBjGfB4ZAOngyiABqdgZDZD"
 # set of unique user id's
 user_ids =  set()
 
@@ -76,7 +76,7 @@ def handle_incoming_messages():
         chatlogs[key_id] = [message]
         checkpointlists[key_id] = ["blubb"] #instantiating
 
-        bot_reply = "Hey there! Welcome to ArgHealthBot. Thanks for taking part in this study! I am interested in your current exercise routine and want to hear arguments and values that explain your choice as well as counterarguments. Please familiarise yourself with the terms and conditions and instructions of this experiment at: http://www.homepages.ucl.ac.uk/~ucablc3/study.html. If you agree to them, just type anything :)"
+        bot_reply = "Hey there! Welcome to ArgHealthBot. Thanks for taking part in this study! I am interested in your current exercise routine and want to hear arguments that explain your choice as well as counterarguments. Please familiarise yourself with the terms and conditions and instructions of this experiment at: http://www.homepages.ucl.ac.uk/~ucablc3/study.html. If you agree to them, just type anything :)"
 
         #add user to set
         user_ids.add(key_id)
